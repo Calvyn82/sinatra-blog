@@ -1,3 +1,4 @@
+require "bundler/setup"
 require "sinatra"
 require_relative "lib/blog/post"
 require_relative "lib/blog/database"
