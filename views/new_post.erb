@@ -1,0 +1,14 @@
+<h1>New Post</h1>
+<form id="new_post_form" action="/admin/posts" method="POST">
+  <% unless post.new? %>
+    <p>Your post could not be saved because</p>
+    <ul>
+      <% post.errors.each do |error| %>
+        <li><%= h error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <input type="text" placeholder="Subject" name="subject"value="<%= h post.subject %>">
+  <textarea placeholder="Body" name="body"><%= h post.body %></textarea>  
+  <input type="submit" value="Post">
+</form>

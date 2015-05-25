@@ -1,0 +1,7 @@
+<h1>Posts</h1>
+
+<ul>
+  <% posts.each do |post| %>
+    <li><a href="/posts/<%= post.slug %>"><%= h post.subject %></a> posted <%= post.created_at.strftime("%B %d, %Y") %></li>
+  <% end %>
+</ul>

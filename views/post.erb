@@ -1,0 +1,5 @@
+<h1><%= h post.subject %></h1>
+
+<p class="dateline">Posted on <%= post.created_at.strftime("%B %d, %Y") %>
+
+<%= markdown post.body %>
